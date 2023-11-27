@@ -1,0 +1,16 @@
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/Configuration$1.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/Configuration$Builder$ConfigKeys.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/Configuration$Builder.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/Configuration.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumber.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberApp.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberImpl.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberView.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberViewImpl$1.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberViewImpl$2.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberViewImpl$3.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberViewImpl$4.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberViewImpl.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawNumberViewObserver.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/DrawResult.class
+/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/build/classes/java/main/it/unibo/mvc/PrintStreamView.class

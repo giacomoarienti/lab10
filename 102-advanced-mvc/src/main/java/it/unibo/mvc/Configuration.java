@@ -1,5 +1,9 @@
 package it.unibo.mvc;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
 
 /**
  * Encapsulates the concept of configuration.
@@ -61,7 +65,41 @@ public final class Configuration {
      * the builder, we emulate the so-called "named arguments".
      * 
      */
-    public static class Builder {
+    public static class Builder  {
+
+        private static final String CONFIG_FILENAME = "config.yml";
+        private enum ConfigKeys {
+            MIN("minimum"),
+            MAX("maximum"),
+            ATTEMPTS("attempts");
+
+            private final String text;
+
+            /**
+             * @param text
+             */
+            ConfigKeys(final String text) {
+                this.text = text;
+            }
+
+            public String getValue() {
+                return this.text;
+            }
+
+            public static ConfigKeys configFrom(final String arg) {
+                for (final var name: ConfigKeys.values()) {
+                    if(name.getValue().equals(arg)) {
+                        return name;
+                    }
+                }
+                throw new IllegalArgumentException(arg);
+            }
+
+            @Override
+            public String toString() {
+                return text;
+            }
+        };
 
         private static final int MIN = 0;
         private static final int MAX = 100;
@@ -99,14 +137,45 @@ public final class Configuration {
             return this;
         }
 
+        private void loadFromFile(final String fileName) throws IOException {
+            try (
+                final BufferedReader configReader = new BufferedReader(
+                    new InputStreamReader(
+                        getClass().getClassLoader().getResourceAsStream(fileName)
+                    )
+                );
+            ) {
+                final var lineIterator = configReader.lines().iterator();
+                while (lineIterator.hasNext()) {
+                    final String line = lineIterator.next();
+                    final List<String> args = List.of(line.split(": "));
+                    /* check for parsing errors */
+                    if (args.size() > 2) {
+                        throw new IllegalStateException("Invalid configuration: " + line);
+                    }
+                    /* save config */
+                    final ConfigKeys key = ConfigKeys.configFrom(args.get(0));
+                    final Integer value = Integer.valueOf(args.get(1));
+                    switch (key) {
+                        case MIN -> this.setMin(value);
+                        case MAX -> this.setMax(value);
+                        case ATTEMPTS -> this.setAttempts(value);
+                        default -> throw new IllegalArgumentException("Invalid configuration key: " + key);
+                    }
+                }
+            }
+        }
+
         /**
          * @return a configuration
+         * @throws IOException
          */
-        public final Configuration build() {
+        public final Configuration build() throws IOException {
             if (consumed) {
                 throw new IllegalStateException("The builder can only be used once");
             }
             consumed = true;
+            this.loadFromFile(CONFIG_FILENAME);
             return new Configuration(max, min, attempts);
         }
     }

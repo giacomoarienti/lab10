@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2023-11-27T12:03:53.796">
+<file name="/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/src/main/java/it/unibo/mvc/Configuration.java">
+<violation beginline="89" endline="89" begincolumn="10" endcolumn="10" rule="UnnecessarySemicolon" ruleset="Code Style" package="it.unibo.mvc" class="Configuration$Builder" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarysemicolon" priority="3">
+Unnecessary semicolon
+</violation>
+<violation beginline="98" endline="98" begincolumn="25" endcolumn="40" rule="RedundantFieldInitializer" ruleset="Performance" package="it.unibo.mvc" class="Configuration$Builder" variable="consumed" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_performance.html#redundantfieldinitializer" priority="3">
+Avoid using redundant field initializer for 'consumed'
+</violation>
+<violation beginline="104" endline="107" begincolumn="16" endcolumn="9" rule="LinguisticNaming" ruleset="Code Style" package="it.unibo.mvc" class="Configuration$Builder" method="setMin" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The setter 'setMin' should not return any type except void linguistically
+</violation>
+<violation beginline="113" endline="116" begincolumn="16" endcolumn="9" rule="LinguisticNaming" ruleset="Code Style" package="it.unibo.mvc" class="Configuration$Builder" method="setMax" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The setter 'setMax' should not return any type except void linguistically
+</violation>
+<violation beginline="122" endline="125" begincolumn="16" endcolumn="9" rule="LinguisticNaming" ruleset="Code Style" package="it.unibo.mvc" class="Configuration$Builder" method="setAttempts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The setter 'setAttempts' should not return any type except void linguistically
+</violation>
+</file>
+<file name="/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/src/main/java/it/unibo/mvc/DrawNumberApp.java">
+<violation beginline="29" endline="29" begincolumn="9" endcolumn="66" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberApp" method="DrawNumberApp" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'config' could be declared final
+</violation>
+<violation beginline="73" endline="73" begincolumn="13" endcolumn="31" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="it.unibo.mvc" class="DrawNumberApp" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="/mnt/c/Users/giacomo.arienti2/Desktop/lab10/102-advanced-mvc/src/main/java/it/unibo/mvc/PrintStreamView.java">
+<violation beginline="62" endline="62" begincolumn="30" endcolumn="43" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="PrintStreamView" method="displayError" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+</pmd>
